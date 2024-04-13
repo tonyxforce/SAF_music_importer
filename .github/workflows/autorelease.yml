@@ -24,4 +24,4 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: |
-            /home/runner/work/SAF_music_importer/SAF_music_importer
+            /home/runner/work/SAF_music_importer/SAF_music_importer/music_importer.exe
