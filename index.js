@@ -1,5 +1,4 @@
 const { execSync } = require('child_process');
-var ffmpeg = require('fluent-ffmpeg');
 const { unlinkSync, readdirSync, existsSync } = require('fs');
 
 var folder = ".\\" || "C:\\Users\\Horic\\AppData\\Roaming\\.minecraft\\music\\"
