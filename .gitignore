@@ -131,5 +131,7 @@ dist
 
 input
 output
+build
 input/*
 output/*
+build/*

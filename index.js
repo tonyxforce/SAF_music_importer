@@ -26,8 +26,6 @@ fs.readdirSync(inputDir, {withFileTypes:true,recursive:true}).forEach((e)=>{
 	outJson[`${e.nameNoPath}_sub`] = {sounds:["custom:" + e.nameNoPath + "_sub"]};
 	outJson[`${e.nameNoPath}_mid`] = {sounds:["custom:" + e.nameNoPath + "_mid"]};
 
-
-
 	child_process.execSync(`ffmpeg -i "${inputDir}\\${e.name}" -af lowpass=120 -ac 1 "${outNameLow}"`);
 	child_process.execSync(`ffmpeg -i "${inputDir}\\${e.name}" -af highpass=120 -ac 1 "${outNameMid}"`);
 })
