@@ -2,7 +2,7 @@ name: AutoRelease
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -14,14 +14,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v2
-      - uses: CupOfTea696/gh-action-auto-release@v1.0.0
       - name: package
         run: |
           npx pkg index.js -o music_importer
-#      with:
-#        title: "Release: $version"
-#        tag: "v$semver"
-#        draft: false
-#        regex: "/^Release: #{semver}$/i"
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
