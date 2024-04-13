@@ -2,7 +2,7 @@ const child_process = require('child_process');
 const fs = require('fs');
 
 var inputDir = process.env.APPDATA + "\\.minecraft\\music";
-var outputDir = "output";
+var outputDir = process.argv[2] || "output";
 
 var outJson = {};
 
