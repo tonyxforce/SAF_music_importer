@@ -1,6 +1,5 @@
 const child_process = require('child_process');
 const fs = require('fs');
-const path = require('path');
 
 var inputDir = process.env.APPDATA + "\\.minecraft\\music";
 var outputDir = "output";
