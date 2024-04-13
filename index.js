@@ -2,15 +2,16 @@ const child_process = require('child_process');
 const fs = require('fs');
 
 var inputDir = process.env.APPDATA + "\\.minecraft\\music";
-var outputDir = process.argv[2] || "output";
+var outputDir = process.argv[2] || `${process.env.APPDATA}\\.minecraft\\resourcepacks\\SAFsounds\\assets\\custom\\sounds`;
 
 var outJson = {};
 
 if(!fs.existsSync(outputDir))
-fs.mkdirSync(outputDir);
+fs.mkdirSync(outputDir, {recursive:true});
 
 fs.readdirSync(inputDir, {withFileTypes:true,recursive:true}).forEach((e)=>{
 	if(!e.isFile()) return;
+	e.name = e.name.replace(" ", "_").toLowerCase();
 	e.nameNoPath = e.name.replace(/\.[^/\\.]+$/, "");
 
 
@@ -30,4 +31,4 @@ fs.readdirSync(inputDir, {withFileTypes:true,recursive:true}).forEach((e)=>{
 	child_process.execSync(`ffmpeg -i "${inputDir}\\${e.name}" -af highpass=120 -ac 1 "${outNameMid}"`);
 })
 
-fs.writeFileSync(outputDir + "/out.json", JSON.stringify(outJson, null, 4));
+fs.writeFileSync(outputDir + "\\..\\sounds.json", JSON.stringify(outJson, null, 4));
