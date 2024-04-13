@@ -1,0 +1,15 @@
+{
+  "name": "saf_music_importer",
+  "version": "1.0.0",
+  "description": "A simple mp3 importer for tizio_bello's Stage Equipment Fornitures mod",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.2"
+  }
+}
