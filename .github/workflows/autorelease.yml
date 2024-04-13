@@ -17,8 +17,8 @@ jobs:
       - name: Package
         run: |
           pwd
-          mkdir /home/out
-          npx pkg index.js -o /home/out/music_importer
+          mkdir /home/runner/work/SAF_music_importer/SAF_music_importer
+          npx pkg index.js -o /home/runner/work/SAF_music_importer/SAF_music_importer/music_importer
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -26,4 +26,4 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: |
-            /home/out/*.*
+            /home/runner/work/SAF_music_importer/SAF_music_importer
