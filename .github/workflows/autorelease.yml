@@ -16,7 +16,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Package
         run: |
-          npx pkg index.js -o music_importer
+          pwd
+          mkdir /home/out
+          npx pkg index.js -o /home/out/music_importer
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -24,4 +26,4 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: |
-            *.*
+            /home/out/*.*
