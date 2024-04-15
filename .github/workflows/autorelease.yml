@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Package
         run: |
-          npx pkg index.js -o /home/runner/work/SAF_music_importer/SAF_music_importer/music_importer -t latest-win-arm64
+          npm run build
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -24,4 +24,4 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: |
-            /home/runner/work/SAF_music_importer/SAF_music_importer/music_importer.exe
+            /home/runner/work/SAF_music_importer/SAF_music_importer/build/*
