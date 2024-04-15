@@ -4,7 +4,8 @@
   "description": "A simple mp3 importer for tizio_bello's Stage Equipment Fornitures mod",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"build": "pkg index.js --out-path ./build/"
   },
   "keywords": [],
   "author": "",
