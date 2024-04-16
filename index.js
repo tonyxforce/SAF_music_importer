@@ -2,9 +2,9 @@ const child_process = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-var inputDir = process.env.APPDATA + "\\.minecraft\\music";
+var inputDir = ".\\INPUT";
 var outputDir = process.argv[2] || `.`;
-outputDir = path.join(outputDir, "SAFsounds\\assets\\custom\\sounds");
+outputDir = path.join(outputDir, "S.E.F_Music_Pack\\assets\\custom\\sounds");
 
 var outJson = {};
 
@@ -36,7 +36,7 @@ fs.readdirSync(inputDir, { withFileTypes: true, recursive: true }).forEach((e) =
 fs.writeFileSync(outputDir + "\\..\\sounds.json", JSON.stringify(outJson, null, 4));
 fs.writeFileSync(path.join(outputDir, "..", "..", "..", "pack.mcmeta"), JSON.stringify({
 	"pack": {
-		"description": "§2§l S.E.F Music",
+		"description": "§2§l S.E.F Music Collector",
 		"pack_format": 6
 	}
 }, null, 4))
