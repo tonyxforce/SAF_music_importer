@@ -2,7 +2,7 @@ const child_process = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-var inputDir = ".\\INPUT_songs";
+var inputDir = ".\\INPUT";
 var outputDir = process.argv[2] || `.`;
 outputDir = path.join(outputDir, "S.E.F_Music_Pack\\assets\\custom\\sounds");
 
