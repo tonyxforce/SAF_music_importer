@@ -3,8 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 var inputDir = process.argv[2] || "INPUT";
-inputDir = path.join(__dirname, inputDir)
-var outputDir = process.argv[3] || path.join(__dirname, "OUTPUT");
+inputDir = path.join(process.cwd(), inputDir)
+var outputDir = process.argv[3] || path.join(process.cwd(), "OUTPUT");
 outputDir = path.join(outputDir, "S.E.F_Music_Pack\\assets\\custom\\sounds");
 
 var outJson = {};
@@ -38,11 +38,11 @@ fs.readdirSync(inputDir, { withFileTypes: true, recursive: true }).forEach((e) =
 	var lowLog = child_process.execSync(`ffmpeg -i "${inputDir}\\${e.name}" -af lowpass=120 -ac 1 -vn "${outNameLow}"`);
 	var midLog = child_process.execSync(`ffmpeg -i "${inputDir}\\${e.name}" -af highpass=120 -ac 1 -vn "${outNameMid}"`);
 
-	if(!fs.existsSync(path.join(__dirname, "logs")))
-	fs.mkdirSync(path.join(__dirname, "logs"), { recursive: true });
+	if(!fs.existsSync(path.join(process.cwd(), "logs")))
+	fs.mkdirSync(path.join(process.cwd(), "logs"), { recursive: true });
 
-	fs.writeFileSync(path.join(__dirname, "logs", "lowlog.txt"), lowLog)
-	fs.writeFileSync(path.join(__dirname, "logs", "midlog.txt"), midLog)
+	fs.writeFileSync(path.join(process.cwd(), "logs", "lowlog.txt"), lowLog)
+	fs.writeFileSync(path.join(process.cwd(), "logs", "midlog.txt"), midLog)
 })
 
 fs.writeFileSync(outputDir + "\\..\\sounds.json", JSON.stringify(outJson, null, 4));
