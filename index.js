@@ -39,6 +39,8 @@ fs.readdirSync(inputDir, { withFileTypes: true, recursive: true }).forEach((e) =
 	var midLog = child_process.execSync(`ffmpeg -i "${inputDir}\\${e.name}" -af highpass=120 -ac 1 -vn "${outNameMid}"`);
 
 	if(!fs.existsSync(path.join(__dirname, "logs")))
+	fs.mkdirSync(path.join(__dirname, "logs"), { recursive: true });
+
 	fs.writeFileSync(path.join(__dirname, "logs", "lowlog.txt"), lowLog)
 	fs.writeFileSync(path.join(__dirname, "logs", "midlog.txt"), midLog)
 })

@@ -1,13 +1,37 @@
 {
-  "name": "saf_music_importer",
-  "version": "1.0.0",
-  "description": "A simple mp3 importer for tizio_bello's Stage Equipment Fornitures mod",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+	"name": "saf_music_importer",
+	"version": "1.0.0",
+	"description": "A simple mp3 importer for tizio_bello's Stage Equipment Fornitures mod",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "npx pkg index.js --out-path ./build/"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	},
+	"repository": "https://github.com/tonyxforce/SAF_music_importer",
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@semantic-release/changelog": "^6.0.3",
+		"@semantic-release/commit-analyzer": "^12.0.0",
+		"@semantic-release/git": "^10.0.1",
+		"@semantic-release/npm": "^12.0.0",
+		"@semantic-release/release-notes-generator": "^13.0.0",
+		"semantic-release": "^23.0.8"
+	},
+	"release": {
+		"plugins": [
+			"@semantic-release/commit-analyzer",
+			"@semantic-release/release-notes-generator",
+			[
+				"@semantic-release/npm",
+				{
+					"npmPublish": false
+				}
+			],
+			"@semantic-release/changelog",
+			"@semantic-release/git"
+		],
+		"branch": "main"
+	}
 }
