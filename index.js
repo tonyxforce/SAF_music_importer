@@ -48,7 +48,7 @@ fs.readdirSync(inputDir, { withFileTypes: true, recursive: true }).forEach((e) =
 fs.writeFileSync(outputDir + "\\..\\sounds.json", JSON.stringify(outJson, null, 4));
 fs.writeFileSync(path.join(outputDir, "..", "..", "..", "pack.mcmeta"), JSON.stringify({
 	"pack": {
-		"description": "§2§l S.E.F Music Collector",
-		"pack_format": 6
+		"description": "§2§l S.E.F Music",
+		"pack_format": 15 // 1.20.1
 	}
 }, null, 4))
