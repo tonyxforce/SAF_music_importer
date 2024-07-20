@@ -48,7 +48,7 @@ A simple mp3 importer for [tizio_bello's `Stage Equipment Fornitures`](https://w
 3) Install all required dependencies and packages
 
     ```bash
-    npm i
+    npm install
     ```
 
 4) To run the code, execute:
