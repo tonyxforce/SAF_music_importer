@@ -7,9 +7,9 @@ A simple mp3 importer for [tizio_bello's `Stage Equipment Fornitures`](https://w
 ### Prerequisites
 
 - Have either [ffmpeg](https://www.ffmpeg.org/) installed in PATH or have the ffmpeg.exe executable downloaded
-    - I also [host ffmpeg on my website](https://tonyxforce.hu/ffmpeg.exe) for quick access, but you shouldn't trust any unofficial sources for binaries
-- Have the to-be-converted songs in mp3, mp4 (DO **NOT** rename mp4 to mp3), or pretty much any common audio or video format
-- Download the latest version of this converter from the [releases page](https://github.com/tonyxforce/SAF_music_importer/releases)
+    - I also [host ffmpeg.exe on my website](https://tonyxforce.hu/ffmpeg.exe) for quick access, but you shouldn't trust any unofficial sources for binaries
+- Have the to-be-converted songs in mp3, mp4 (DO **NOT** rename .mp4 files to .mp3), or pretty much any common audio or video format
+- Download the latest version of this converter from the [releases page](https://github.com/tonyxforce/SEF_music_importer/releases)
 
 ### Usage
 
@@ -34,13 +34,13 @@ A simple mp3 importer for [tizio_bello's `Stage Equipment Fornitures`](https://w
 1) Clone the repo:
 
     ```bash
-    git clone https://github.com/tonyxforce/SAF_music_importer
+    git clone https://github.com/tonyxforce/SEF_music_importer
     ```
 
 2) `cd` into the directory
 
     ```bash
-    cd SAF_music_importer
+    cd SEF_music_importer
     ```
 
     - If you don't have ffmpeg in PATH, copy ffmpeg.exe here
