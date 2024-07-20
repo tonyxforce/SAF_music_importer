@@ -32,14 +32,35 @@ A simple mp3 importer for [tizio_bello's `Stage Equipment Fornitures`](https://w
 ### Build
 
 1) Clone the repo:
-``git clone https://github.com/tonyxforce/SAF_music_importer``
+
+    ```bash
+    git clone https://github.com/tonyxforce/SAF_music_importer
+    ```
+
+2) `cd` into the directory
+
+    ```bash
+    cd SAF_music_importer
+    ```
+
     - If you don't have ffmpeg in PATH, copy ffmpeg.exe here
-2) cd into the directory
-   ``cd SAF_music_importer``
+
 3) Install all required dependencies and packages
-```npm i```
-1) To run the code, execute:
-``npm start``
-1) To build/package it, execute:
-``npm run build``
-It should create a directory named `build` with all the binaries in it
+
+    ```bash
+    npm i
+    ```
+
+4) To run the code, execute:
+
+    ```bash
+    npm start
+    ```
+
+5) To build/package it, execute:
+
+    ```bash
+    npm run build
+    ```
+
+    It should create a directory named `build` with binaries for all platforms in it
