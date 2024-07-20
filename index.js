@@ -35,8 +35,8 @@ fs.readdirSync(inputDir, { withFileTypes: true, recursive: true }).forEach((e) =
 	outJson[`${e.nameNoPath}_sub`] = { sounds: ["custom:" + e.nameNoPath + "_sub"] };
 	outJson[`${e.nameNoPath}_mid`] = { sounds: ["custom:" + e.nameNoPath + "_mid"] };
 
-	var lowLog = child_process.execSync(`ffmpeg -i "${inputDir}\\${e.name}" -af lowpass=120 -ac 1 -map 0:V -vn "${outNameLow}"`);
-	var midLog = child_process.execSync(`ffmpeg -i "${inputDir}\\${e.name}" -af highpass=120 -ac 1 -map 0:V -vn "${outNameMid}"`);
+	var lowLog = child_process.execSync(`ffmpeg -i "${inputDir}\\${e.name}" -map 0:a -ac 1 -vn -af lowpass=120 "${outNameLow}"`);
+	var midLog = child_process.execSync(`ffmpeg -i "${inputDir}\\${e.name}" -map 0:a -ac 1 -vn -af highpass=120 "${outNameMid}"`);
 
 	if(!fs.existsSync(path.join(process.cwd(), "logs")))
 	fs.mkdirSync(path.join(process.cwd(), "logs"), { recursive: true });
