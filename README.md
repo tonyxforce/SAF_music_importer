@@ -2,6 +2,10 @@
 
 A simple mp3 importer for [tizio_bello's `Stage Equipment Fornitures`](https://www.curseforge.com/minecraft/mc-mods/stage-equipment-fornitures) mod
 
+
+### [Usage Video](https://youtu.be/WBChXYTfldU)
+[![Watch the video](https://img.youtube.com/vi/WBChXYTfldU/maxresdefault.jpg)](https://youtu.be/WBChXYTfldU)
+
 ## Using released binaries (for most people)
 
 ### Prerequisites
